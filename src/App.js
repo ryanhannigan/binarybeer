@@ -1,16 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Typography from '@material-ui/core/Typography';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Home from './pages/home';
+import PubList from './pages/pub-list';
+import Pub from './pages/pub';
 
-function App() {
+function AppRouter() {
   return (
-    <div className="App">
-      <Typography variant="h1" component="h2" gutterBottom>
-        h1. Heading
-      </Typography>
-    </div>
+    <Router>
+      <Route path="/" exact component={Home} />
+      <Route path="/publist" component={PubList} />
+      <Route path="/pub/:id/" component={Pub} />
+    </Router>
   );
 }
 
-export default App;
+export default AppRouter;
