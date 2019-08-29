@@ -13,7 +13,7 @@ export default () => {
       {
         imageSrc: 'http://www.thoroughlymodernmilly.com/wp-content/uploads/2012/04/IMG_6262.jpg',
         pubname: 'The Mall',
-        rating: 4,
+        rating: 3.5,
         pubId: 'themall',
       },
       {

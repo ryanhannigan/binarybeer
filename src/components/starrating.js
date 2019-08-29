@@ -13,7 +13,7 @@ export default ({title, rating, children, topGutter = 0, leftGutter = 1}) => {
       <StarRatings
         rating={rating}
         starRatedColor="#F2C94C"
-        numberOfStars={rating}
+        numberOfStars={5}
         name={`${title} rating`}
         starDimension="28px"
       />
