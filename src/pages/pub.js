@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import BlueContainer from '../components/bluecontainer';
 import SquareImage from '../components/squareimage';
 import StarRating from '../components/starrating';
@@ -12,6 +13,7 @@ export default ({match}) => {
   const [pubRating, setPubRating] = useState(0);
   const [pubAddress, setPubAddress] = useState({});
   const [pubImageSrc, setPubImageSrc] = useState('');
+  const [pubFeatures, setPubFeatures] = useState([]);
   const [individualRatings, setIndividualRatings] = useState([]);
 
   useEffect(() => {
@@ -37,6 +39,10 @@ export default ({match}) => {
       {title: 'BeerSelection', value: 2},
       {title: 'ValueForMoney', value: 1},
     ]);
+    setPubFeatures([
+      "StreetDrinking",
+      "Quiz"
+    ]);
   }, []);
 
   return (
@@ -55,6 +61,14 @@ export default ({match}) => {
         {
           individualRatings && individualRatings.map((rating) => (<StarRating key={rating.title} title={rating.title} rating={rating.value} topGutter={1} leftGutter={0} />))
         }
+        </Box>
+        <Box display="flex" flexDirection="column" justifyContent="space-between" marginLeft={0} style={{ backgroundColor: '#fff' }} paddingLeft={1} paddingRight={1} flex={1} marginTop={1} minWidth="95%">
+          <Typography variant="h5" style={{ fontWeight: 700 }}>
+            Pub Features
+          </Typography>
+          {pubFeatures.map((feature) => (
+            <Typography variant="body2">{feature}</Typography>
+          ))}
         </Box>
       </Box>
     </BlueContainer>
