@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: '#ebebeb',
+    backgroundColor: '#FFF',
     padding: theme.spacing(1),
     width:'100%',
     textAlign:'center'

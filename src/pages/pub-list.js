@@ -1,8 +1,8 @@
 import React from 'react';
 import BlueContainer from '../components/bluecontainer';
 import Pub from '../components/publisting';
-
 import Title from '../components/Title';
+
 export default () => {
   return (
     <BlueContainer>

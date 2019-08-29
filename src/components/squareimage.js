@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default ({src, pubname}) => {
+export default ({src, pubname, size = 65}) => {
   return (
-    <img src={src} alt={` ${pubname}`} height="65" width="65"/>
+    <img src={src} alt={` ${pubname}`} height={size} width={size}/>
   );
 }
