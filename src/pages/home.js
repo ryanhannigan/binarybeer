@@ -7,7 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
-
+import BlueContainer from '../components/bluecontainer';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -36,17 +36,12 @@ export default () => {
   return (
     <div class="home">
     	
-    <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <Grid container spacing={2}>
+    <BlueContainer>
           <Title>Herr's pub club</Title>
           <Typography align="center" component="div" style={{width:'100%', margin:'30px 0'}}>
           	<Button variant="contained" size="large" color="primary" component={Link} to="/publist">View pubs</Button>
           </Typography>
-        </Grid>
-      </Paper>
-
-      </div>
+       </BlueContainer>
     </div>
   );
 }
