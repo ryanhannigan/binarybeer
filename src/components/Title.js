@@ -11,8 +11,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Title(props) {
+export default function Title({ children, bottomGutter = 0 }) {
   const classes = useStyles();
 
-  return <Typography variant="h2" className={classes.root}>{props.children}</Typography>;
+  return <Typography variant="h2" className={classes.root} gutterBottom={bottomGutter}>{children}</Typography>;
 }
