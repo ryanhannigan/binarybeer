@@ -42,7 +42,7 @@ export default () => {
           Herr's pub<br/> <span>*</span> club <span>*</span>
           </Title>
           <Image size={300} src={require(`../assets/hersh.png`)} />
-           <Typography align="center" component="div" style={{width:'110%', margin:'5px -5%', paddingBottom:'20px', borderBottom:'1px solid #DDC000'}}>
+           <Typography align="center" component="div" style={{width:'110%', margin:'5px -5%', padding:'20px 0', borderBottom:'1px solid #DDC000'}}>
             <Button variant="contained" size="large" color="primary" component={Link} style={{fontWeight:'600'}} to="/publist">View Pubs</Button>
       </Typography>
         </Box>
