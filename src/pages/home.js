@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
 	const classes = useStyles();
   return (
-    <div class="home">
+    <div className="home">
       <BlueContainer>
         <Box display="flex" flexDirection="column" alignItems="center">
           <Title bottomGutter={1}>
