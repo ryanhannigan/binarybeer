@@ -22,7 +22,7 @@ export default ({match}) => {
     //fetch data
 
     setPubName('The Mall');
-    setPubRating(3);
+    setPubRating(4);
     setPubAddress({
       addressLine: '71 Palace Gardens Terrace',
       town: 'Kensington',
@@ -33,13 +33,13 @@ export default ({match}) => {
     setIndividualRatings([
       {title: 'Trendiness', value: 5},
       {title: 'Grottiness', value: 2},
-      {title: 'Busy-ness', value: 1},
+      {title: 'Busy-ness', value: 2},
       {title: 'Welcoming', value: 5},
-      {title: 'EasyToGetService', value: 2},
-      {title: 'EnoughSeating', value: 3},
+      {title: 'EasyToGetService', value: 3},
+      {title: 'EnoughSeating', value: 4},
       {title: 'CocktailSelection', value: 4},
-      {title: 'BeerSelection', value: 2},
-      {title: 'ValueForMoney', value: 1},
+      {title: 'BeerSelection', value: 4},
+      {title: 'ValueForMoney', value: 2},
     ]);
     setPubFeatures([
       "StreetDrinking",
@@ -67,7 +67,7 @@ export default ({match}) => {
           individualRatings && individualRatings.map((rating) => (<StarRating key={rating.title} title={rating.title} rating={rating.value} topGutter={1} leftGutter={0} />))
         }
         </Box>
-        
+
         <hr/>
 
         <Box display="flex" flexDirection="column" justifyContent="space-between" marginLeft={0} style={{ backgroundColor: '#fff', borderRadius:'5px' }} paddingLeft={1} paddingRight={1} flex={1} marginTop={1} minWidth="95%">

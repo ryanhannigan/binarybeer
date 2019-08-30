@@ -18,7 +18,7 @@ export default () => {
 
   console.log(useState([]));
 
-  const getRating = () => (Math.floor(Math.random() * 5));
+  const getRating = () => (4 + Math.floor(Math.random() * 2));
 
 useEffect(() => {
     const fetchData = async () => {
