@@ -37,11 +37,14 @@ export default () => {
     <div class="home">
       <BlueContainer>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Title bottomGutter={1}>Herr's pub club</Title>
+          <Title bottomGutter={1}>
+          <span>Welcome</span><br/>
+          Herr's pub<br/> <span>*</span> club <span>*</span>
+          </Title>
           <Image size={300} src={require(`../assets/hersh.png`)} />
-          <Typography align="center" component="div" style={{width:'100%', margin:'30px 0'}}>
-            <Button variant="contained" size="large" color="primary" component={Link} to="/publist">View pubs</Button>
-          </Typography>
+           <Typography align="center" component="div" style={{width:'110%', margin:'5px -5%', paddingBottom:'20px', borderBottom:'1px solid #DDC000'}}>
+            <Button variant="contained" size="large" color="primary" component={Link} style={{fontWeight:'600'}} to="/publist">View Pubs</Button>
+      </Typography>
         </Box>
       </BlueContainer>
     </div>

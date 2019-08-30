@@ -7,9 +7,9 @@ import StarRating from '../components/starrating';
 export default ({imageSrc, pubname, pubId, rating}) => {
   return (
     <Link to={`/pub/${pubId}`} style={{ textDecoration: 'none', cursor: 'pointer', color: '#000' }}>
-      <Box display="flex" flexDirection="row" padding={1}>
-        <Image src={imageSrc} pubname={pubname} />
-        <Box display="flex" flexDirection="column" justifyContent="centre" marginLeft={1} style={{ backgroundColor: '#fff' }} paddingLeft={1} paddingRight={1} flex={1}>
+      <Box display="flex" color="text.primary" flexDirection="row" padding={1} style={{ color: '#fff',background:'#000 !important', borderTop:'1px solid rgb(66, 66, 66)' }}>
+        <Image src={imageSrc} pubname={pubname} style={{borderRadius:'5px'}} />
+        <Box display="flex" flexDirection="column" justifyContent="centre" marginLeft={0}  paddingLeft={0} paddingRight={1} flex={1}>
           <StarRating
             title={pubname}
             rating={rating}

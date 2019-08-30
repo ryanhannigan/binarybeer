@@ -4,10 +4,19 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: '#FFF',
+    color: '#DDC000',
     padding: theme.spacing(1),
-    width:'100%',
-    textAlign:'center'
+    width:'110%',
+    textAlign:'center',
+    borderTop:'1px solid #DDC000',
+    marginTop:'5px',
+    marginLeft:'-5%',
+    marginRight:'-5%',
+    '& span':{
+      color:'#fff',
+      fontSize:'45%',
+      fontWeight:'600'
+    }
   },
 }));
 

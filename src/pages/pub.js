@@ -6,6 +6,8 @@ import SquareImage from '../components/squareimage';
 import StarRating from '../components/starrating';
 import Address from '../components/address';
 import Title from '../components/Title';
+import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 
 export default ({match}) => {
 
@@ -47,7 +49,10 @@ export default ({match}) => {
 
   return (
     <BlueContainer>
-      <Title>{pubName}</Title>
+      <Title>
+        <span>Pub</span><br/>
+        <span>*</span> {pubName} <span>*</span>
+      </Title>
       <Box display="flex" flexDirection="row" marginTop="8px">
         {
           pubImageSrc && <SquareImage src={pubImageSrc} size={116}/>
@@ -71,6 +76,10 @@ export default ({match}) => {
           ))}
         </Box>
       </Box>
+
+      <Typography align="center" component="div" style={{width:'110%', margin:'5px -5%', paddingBottom:'20px', borderBottom:'1px solid #DDC000'}}>
+            <Button variant="contained" size="large" color="primary" component={Link} to="/publist">Back</Button>
+      </Typography>
     </BlueContainer>
   );
 }

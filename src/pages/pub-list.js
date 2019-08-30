@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import BlueContainer from '../components/bluecontainer';
+
 import Pub from '../components/publisting';
 import Title from '../components/Title';
+
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 
 export default () => {
   const [ pubList, setPubList ] = useState([]);
@@ -24,12 +29,16 @@ export default () => {
 
   return (
     <BlueContainer>
-      <Title>Pub List</Title>
+      <Title><span>Pub</span><br/><span>*</span> List <span>*</span></Title>
       {
         pubList && pubList.map((pub) => (
           <Pub imageSrc={pub.imageSrc} pubname={pub.pubname} rating={pub.rating} pubId={pub.pubId} />
         ))
       }
+
+      <Typography align="center" component="div" style={{width:'110%', margin:'5px -5%', paddingBottom:'20px', borderBottom:'1px solid #DDC000'}}>
+            <Button variant="contained" size="large" color="primary" component={Link} style={{fontWeight:'600'}} to="/">Back</Button>
+      </Typography>
     </BlueContainer>
   );
 }
