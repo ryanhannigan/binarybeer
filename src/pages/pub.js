@@ -53,7 +53,7 @@ export default ({match}) => {
         <span>Pub</span><br/>
         <span>*</span> {pubName} <span>*</span>
       </Title>
-      <Box display="flex" flexDirection="row" marginTop="8px">
+      <Box display="flex" flexDirection="row" marginLeft="10px" marginTop="8px" marginRight="10px">
         {
           pubImageSrc && <SquareImage src={pubImageSrc} size={116}/>
         }
@@ -61,18 +61,18 @@ export default ({match}) => {
           <Address {...pubAddress} />
         </StarRating>
       </Box>
-      <Box display="flex" flexDirection="column" marginTop={1} alignItems="center">
+      <Box display="flex" flexDirection="column" marginTop={1}  alignItems="center">
         <Box minWidth="95%">
         {
           individualRatings && individualRatings.map((rating) => (<StarRating key={rating.title} title={rating.title} rating={rating.value} topGutter={1} leftGutter={0} />))
         }
         </Box>
-        <Box display="flex" flexDirection="column" justifyContent="space-between" marginLeft={0} style={{ backgroundColor: '#fff' }} paddingLeft={1} paddingRight={1} flex={1} marginTop={1} minWidth="95%">
+        <Box display="flex" flexDirection="column" justifyContent="space-between" marginLeft={0} style={{ backgroundColor: '#fff', borderRadius:'5px' }} paddingLeft={1} paddingRight={1} flex={1} marginTop={1} minWidth="95%">
           <Typography variant="h5" style={{ fontWeight: 700 }}>
             Pub Features
           </Typography>
           {pubFeatures.map((feature) => (
-            <Typography variant="body2">{feature}</Typography>
+            <Typography key={feature} variant="body2">{feature}</Typography>
           ))}
         </Box>
       </Box>
