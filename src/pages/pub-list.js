@@ -23,9 +23,9 @@ export default () => {
 useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        'http://10.54.33.20:9000/getpubs',
+        'https://646df382.ngrok.io/getpubs',
       );
-      console.log(result.data)
+
       setTimeout(setPubList(result.data), 1500);
     };
     fetchData();
