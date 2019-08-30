@@ -37,7 +37,7 @@ useEffect(() => {
       <Title><span>Pub</span><br/><span>*</span> List <span>*</span></Title>
       {
         pubList && pubList.map((pub) => (
-          <Pub key={pub.ItemId} imageSrc={'http://www.thoroughlymodernmilly.com/wp-content/uploads/2012/04/IMG_6262.jpg'} pubname={pub.name} rating={getRating()} ItemId={pub.ItemId} />
+          <Pub key={pub.ItemId} imageSrc={pub.ItemId+'.png'} pubname={pub.name} rating={getRating()} ItemId={pub.ItemId} />
         )) ||
         <div style={{color:'#ffffff', textAlign:'center', margin:'20px auto', width:'100%'}}>
         	<Typography variant="h6">Loading</Typography>
